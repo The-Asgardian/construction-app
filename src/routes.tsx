@@ -1,58 +1,120 @@
 import { Icon } from '@chakra-ui/react';
 import {
-  MdBarChart,
-  MdPerson,
   MdHome,
+  MdWork,
+  MdReceipt,
+  MdFileCopy,
+  MdDescription,
+  MdPeople,
+  MdAssignment,
+  MdAccessTime,
+  MdCalendarToday,
+  MdAccountBalance,
+  MdCalculate,
   MdLock,
-  MdOutlineShoppingCart,
 } from 'react-icons/md';
 
 // Admin Imports
-import MainDashboard from 'views/admin/default';
-import NFTMarketplace from 'views/admin/marketplace';
-import Profile from 'views/admin/profile';
-import DataTables from 'views/admin/dataTables';
-import RTL from 'views/admin/rtl';
+import Dashboard from 'views/admin/dashboard';
+import Projects from 'views/admin/projects';
+import Invoices from 'views/admin/invoices';
+import Quotes from 'views/admin/quotes';
+import Documents from 'views/admin/documents';
+import Receipts from 'views/admin/receipts';
+import Contacts from 'views/admin/contacts';
+import Tasks from 'views/admin/tasks';
+import Timesheets from 'views/admin/timesheets';
+import Calendar from 'views/admin/calendar';
+import Finance from 'views/admin/finance';
+import TaxReturns from 'views/admin/tax-returns';
 
 // Auth Imports
 import SignInCentered from 'views/auth/signIn';
 
 const routes = [
   {
-    name: 'Main Dashboard',
+    name: 'Dashboard',
     layout: '/admin',
     path: '/default',
     icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
-    component: <MainDashboard />,
+    component: <Dashboard />,
   },
   {
-    name: 'NFT Marketplace',
+    name: 'Projects',
     layout: '/admin',
-    path: '/nft-marketplace',
-    icon: (
-      <Icon
-        as={MdOutlineShoppingCart}
-        width="20px"
-        height="20px"
-        color="inherit"
-      />
-    ),
-    component: <NFTMarketplace />,
-    secondary: true,
+    path: '/projects',
+    icon: <Icon as={MdWork} width="20px" height="20px" color="inherit" />,
+    component: <Projects />,
   },
   {
-    name: 'Data Tables',
+    name: 'Invoices',
     layout: '/admin',
-    icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    path: '/data-tables',
-    component: <DataTables />,
+    path: '/invoices',
+    icon: <Icon as={MdReceipt} width="20px" height="20px" color="inherit" />,
+    component: <Invoices />,
   },
   {
-    name: 'Profile',
+    name: 'Quotes',
     layout: '/admin',
-    path: '/profile',
-    icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
-    component: <Profile />,
+    path: '/quotes',
+    icon: <Icon as={MdFileCopy} width="20px" height="20px" color="inherit" />,
+    component: <Quotes />,
+  },
+  {
+    name: 'Documents',
+    layout: '/admin',
+    path: '/documents',
+    icon: <Icon as={MdDescription} width="20px" height="20px" color="inherit" />,
+    component: <Documents />,
+  },
+  {
+    name: 'Receipts',
+    layout: '/admin',
+    path: '/receipts',
+    icon: <Icon as={MdReceipt} width="20px" height="20px" color="inherit" />,
+    component: <Receipts />,
+  },
+  {
+    name: 'Contacts',
+    layout: '/admin',
+    path: '/contacts',
+    icon: <Icon as={MdPeople} width="20px" height="20px" color="inherit" />,
+    component: <Contacts />,
+  },
+  {
+    name: 'Tasks',
+    layout: '/admin',
+    path: '/tasks',
+    icon: <Icon as={MdAssignment} width="20px" height="20px" color="inherit" />,
+    component: <Tasks />,
+  },
+  {
+    name: 'Timesheets',
+    layout: '/admin',
+    path: '/timesheets',
+    icon: <Icon as={MdAccessTime} width="20px" height="20px" color="inherit" />,
+    component: <Timesheets />,
+  },
+  {
+    name: 'Calendar',
+    layout: '/admin',
+    path: '/calendar',
+    icon: <Icon as={MdCalendarToday} width="20px" height="20px" color="inherit" />,
+    component: <Calendar />,
+  },
+  {
+    name: 'Finance',
+    layout: '/admin',
+    path: '/finance',
+    icon: <Icon as={MdAccountBalance} width="20px" height="20px" color="inherit" />,
+    component: <Finance />,
+  },
+  {
+    name: 'Tax Returns',
+    layout: '/admin',
+    path: '/tax-returns',
+    icon: <Icon as={MdCalculate} width="20px" height="20px" color="inherit" />,
+    component: <TaxReturns />,
   },
   {
     name: 'Sign In',
@@ -60,13 +122,6 @@ const routes = [
     path: '/sign-in',
     icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
     component: <SignInCentered />,
-  },
-  {
-    name: 'RTL Admin',
-    layout: '/rtl',
-    path: '/rtl-default',
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
-    component: <RTL />,
   },
 ];
 

@@ -8,6 +8,7 @@ import { SidebarContext } from 'contexts/SidebarContext';
 import { useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import routes from 'routes';
+import ProjectDetails from 'views/admin/projects/projectDetails';
 
 // Custom Chakra theme
 export default function Dashboard(props: { [x: string]: any }) {
@@ -112,6 +113,7 @@ export default function Dashboard(props: { [x: string]: any }) {
             >
               <Routes>
                 {getRoutes(routes)}
+                <Route path="/projects/:id" element={<ProjectDetails />} />
                 <Route
                   path="/"
                   element={<Navigate to="/admin/default" replace />}
